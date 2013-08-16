@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Redkiwi_Rklogrotate>
+			<active>true</active>
+			<codePool>community</codePool>
+		</Redkiwi_Rklogrotate>
+	</modules>
+</config>

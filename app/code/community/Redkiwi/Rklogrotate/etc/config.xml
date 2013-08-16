@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Redkiwi_Rklogrotate>
+			<version>1.0.0</version>
+		</Redkiwi_Rklogrotate>
+	</modules>
+   
+	<global>
+		<models>
+			<rklogrotate>
+				<class>Redkiwi_Rklogrotate_Model</class>
+			</rklogrotate>
+		</models>
+		
+		<log>
+			<core>
+				<writer_model>Redkiwi_Rklogrotate_Model_Zend_Log_Writer_Stream</writer_model>
+			</core>
+		</log>
+	</global>
+	
+	<default>
+		<system>
+			<log>
+				<logrotate_format>dm</logrotate_format>
+				<logrotate_keep>20</logrotate_keep>
+			</log>
+		</system>
+	</default>
+	
+    <crontab>
+        <jobs>
+            <rklogrotate_clean>
+                <schedule><cron_expr>0 0 * * *</cron_expr></schedule>
+                <run><model>rklogrotate/cron::logClean</model></run>
+            </rklogrotate_clean>
+        </jobs>
+    </crontab>
+    
+</config> 

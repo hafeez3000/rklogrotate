@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<config>
+	<sections>
+		<system>
+            <groups>
+                <log>
+					<fields>
+						<logrotate_format translate="label">
+							<label>Logrotate date format</label>
+							<comment><![CDATA[Format string used in the PHP date function]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</logrotate_format>
+						<logrotate_keep translate="label">
+							<label>Save Logfile, Days</label>
+							<comment><![CDATA[For all files in log directory]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</logrotate_keep>
+					</fields>
+				</log>
+			</groups>
+		</system>
+	</sections>
+</config>
